@@ -1,76 +1,317 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>We're Coming Soon</title>
-  
-  <style>
-      body {
-      background: #000;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akira Yuzai – Software Engineer</title>
+    <meta name="description" content="Personal contact page for a software engineer – includes links to LinkedIn, GitHub, Telegram, and more.">
     
-    div {
-      color: #5dea62;
-      font-family: Monaco, monospace;
-      font-size: 24px;
-      width: 100%;
-      text-align: center;
-      position: absolute;
-      top: 45%;
-      left: 0;
-      animation: 120ms infinite normal glitch;
-    }
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Akira Yuzai – Software Engineer">
+    <meta property="og:description" content="Personal contact page for a software engineer – includes links to LinkedIn, GitHub, Telegram, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yuzaiakira.github.io">
     
-    span {
-      animation: 1.5s infinite normal imleç;
-    }
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    ::-moz-selection {
-      background: #7021d2;
-      color: #fff;
-    }
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    ::selection {
-      background: #7021d2;
-      color: #fff;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    @keyframes glitch {
-      0% {
-        opacity: 0;
-        left: 0;
-      }
-      40%,
-      80% {
-        opacity: 1;
-        left: -2px;
-      }
-    }
-    
-    @keyframes imleç {
-      0% {
-        opacity: 0;
-        left: 0;
-      }
-      40% {
-        opacity: 0;
-        left: -2px;
-      }
-      80% {
-        opacity: 1;
-        left: -2px;
-      }
-    }
-
-  </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+<body class="antialiased">
+    <!-- Header Section -->
+    <header class="min-h-screen flex items-center justify-center px-4 py-16 relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Large soft blue blob - top right -->
+            <div class="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-blue-300/20 to-purple-300/15 rounded-full blur-3xl opacity-60 animate-pulse"></div>
+            
+            <!-- Medium turquoise blob - bottom left -->
+            <div class="absolute bottom-20 left-8 w-64 h-64 bg-gradient-to-tr from-cyan-300/25 to-teal-300/20 rounded-full blur-3xl opacity-50"></div>
+            
+            <!-- Small pink accent - center right -->
+            <div class="absolute top-1/3 right-1/4 w-32 h-32 bg-gradient-to-br from-pink-300/30 to-rose-300/25 rounded-full blur-2xl opacity-40"></div>
+        </div>
 
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Floating Particles -->
+            <div class="particles-container">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+            </div>
+            
+            <!-- Gradient Orbs -->
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
 
-  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
-    <div id="yazı">█ █ █ <span style="color:black">█ █ █ █ █ █ █ █ █ █ </span>31%
-      <br>&gt; We're Coming Soon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <br>&gt; Yuzai Akira :)  <span id="imleç">█</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    </div>
-  </body>
+        <div class="text-center max-w-4xl mx-auto relative z-10">
+            <!-- Greeting Badge -->
+            <div class="greeting-badge mb-8">
+                <span class="greeting-text">Hello World! 👋</span>
+            </div>
 
-</html>
+            <div>
+                <!-- Enhanced Profile Image -->
+                <div class="profile-container mb-8">
+                    <div class="profile-image w-32 h-32 rounded-full mx-auto flex items-center justify-center relative overflow-hidden">
+                        <div class="profile-glow"></div>
+                        <img src="assets/img/profile.jpg" alt="Akira Yuzai" class="w-full h-full object-cover rounded-full relative z-10">
+                        <div class="profile-ring"></div>
+                    </div>
+                </div>
+                
+                <!-- Name with Typewriter Effect -->
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4 typewriter">
+                    Akira Yuzai
+                </h1>
+                
+                <!-- Animated Title -->
+                <h2 class="text-2xl md:text-3xl font-medium text-blue-600 mb-6 animated-title">
+                    <span class="title-word">Software</span>
+                    <span class="title-word">Engineer</span>
+                </h2>
+                
+                <!-- Enhanced Tagline -->
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed tagline-text">
+                    A geek developer with a deep-seated curiosity for exploring new technologies and frameworks
+                </p>
+                
+                <!-- Tech Stack Badges -->
+                <div class="tech-stack mt-8 flex flex-wrap justify-center gap-3">
+                    <span class="tech-badge">Blockchain</span>
+                    <span class="tech-badge">Web</span>
+                    <span class="tech-badge">AI</span>
+                    <span class="tech-badge">Python</span>
+                </div>
+                
+                <!-- Call to Action Buttons -->
+                <div class="cta-buttons mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#about" class="cta-button primary">
+                        <i class="fas fa-user mr-2"></i>
+                        About Me
+                    </a>
+                    <a href="#contact" class="cta-button secondary">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Mouse Animation -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <div class="mouse-scroll">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Soft purple blob - bottom right -->
+            <div class="absolute bottom-10 right-16 w-80 h-80 bg-gradient-to-tl from-purple-300/20 to-indigo-300/15 rounded-full blur-3xl opacity-40"></div>
+            
+            <!-- Small cyan accent - top left -->
+            <div class="absolute top-10 left-12 w-40 h-40 bg-gradient-to-br from-cyan-300/25 to-blue-300/20 rounded-full blur-2xl opacity-35"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="glass-card rounded-3xl p-8 md:p-12 fade-in">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+                    About Me
+                </h3>
+                <p class="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+                    Hi, I'm Akira, a passionate software engineer with a deep-seated curiosity for exploring new technologies and frameworks. I love teaching what I've learned and sharing knowledge with the developer community. With expertise in modern web technologies and a commitment to clean, maintainable code, I create innovative solutions that make a difference.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social & Contact Links Section -->
+    <section id="contact" class="py-20 px-4 relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Large soft blue-green blob - top left -->
+            <div class="absolute top-16 left-8 w-72 h-72 bg-gradient-to-br from-blue-300/20 to-emerald-300/15 rounded-full blur-3xl opacity-45"></div>
+            
+            <!-- Medium pink blob - bottom right -->
+            <div class="absolute bottom-16 right-12 w-56 h-56 bg-gradient-to-tl from-pink-300/25 to-rose-300/20 rounded-full blur-3xl opacity-40"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <h3 class="text-3xl font-bold text-gray-800 mb-12 text-center fade-in">
+                Let's Connect
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Telegram -->
+                <a href="https://t.me/yuzaiakira" target="_blank" rel="noopener noreferrer" 
+                   class="contact-link rounded-2xl p-6 text-center group">
+                    <i class="fab fa-telegram text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Telegram</h4>
+                    <p class="text-gray-600">@yuzaiakira</p>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:yuzai.akira@gmail.com" 
+                   class="contact-link rounded-2xl p-6 text-center group">
+                    <i class="fas fa-envelope text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Email</h4>
+                    <p class="text-gray-600">yuzai.akira@gmail.com</p>
+                </a>
+                
+                <!-- Phone -->
+                <a href="tel:+989012363837" 
+                   class="contact-link rounded-2xl p-6 text-center group">
+                    <i class="fas fa-phone text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Phone</h4>
+                    <p class="text-gray-600">+98 9012363837</p>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/yuzaiakira" target="_blank" rel="noopener noreferrer" 
+                   class="contact-link rounded-2xl p-6 text-center group">
+                    <i class="fab fa-linkedin text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">LinkedIn</h4>
+                    <p class="text-gray-600">in/yuzaiakira</p>
+                </a>
+                
+                <!-- GitHub -->
+                <a href="https://github.com/yuzaiakira" target="_blank" rel="noopener noreferrer" 
+                   class="contact-link rounded-2xl p-6 text-center group">
+                    <i class="fab fa-github text-4xl text-blue-500 mb-4 group-hover:scale-110 transition-transform duration-300"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">GitHub</h4>
+                    <p class="text-gray-600" id="github-stats">Loading...</p>
+                </a>
+                
+                <!-- Blog Placeholder -->
+                <div class="neumorphic-card rounded-2xl p-6 text-center opacity-75">
+                    <i class="fas fa-pen-fancy text-4xl text-gray-400 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-600 mb-2">Blog</h4>
+                    <p class="text-gray-500">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic GitHub Profile Section -->
+    <section class="py-20 px-4 relative overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <!-- Soft turquoise blob - center left -->
+            <div class="absolute top-1/2 left-6 w-64 h-64 bg-gradient-to-r from-cyan-300/20 to-teal-300/15 rounded-full blur-3xl opacity-35 transform -translate-y-1/2"></div>
+            
+            <!-- Small purple accent - top right -->
+            <div class="absolute top-20 right-20 w-48 h-48 bg-gradient-to-bl from-purple-300/25 to-violet-300/20 rounded-full blur-2xl opacity-30"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <h3 class="text-3xl font-bold text-gray-800 mb-12 text-center fade-in">
+                GitHub Activity
+            </h3>
+            
+            <!-- GitHub Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <i class="fas fa-code text-3xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Repositories</h4>
+                    <p class="text-2xl font-bold text-blue-600" id="repo-count">-</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <i class="fas fa-users text-3xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Followers</h4>
+                    <p class="text-2xl font-bold text-blue-600" id="followers-count">-</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <i class="fas fa-eye text-3xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Following</h4>
+                    <p class="text-2xl font-bold text-blue-600" id="following-count">-</p>
+                </div>
+                
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <i class="fas fa-calendar text-3xl text-blue-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-gray-800 mb-2">Member Since</h4>
+                    <p class="text-lg font-bold text-blue-600" id="member-since">-</p>
+                </div>
+            </div>
+            
+            <!-- Latest Repositories -->
+            <div class="glass-card rounded-3xl p-8 md:p-12">
+                <div class="flex items-center justify-between mb-8">
+                    <h4 class="text-2xl font-bold text-gray-800">
+                        Latest Open Source Projects
+                    </h4>
+                    <a href="https://github.com/yuzaiakira?tab=repositories" target="_blank" rel="noopener noreferrer" 
+                       class="text-blue-600 hover:text-blue-800 transition-colors duration-300 flex items-center">
+                        <span>View All Projects</span>
+                        <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="repos-container">
+                    <div class="text-center py-8">
+                        <i class="fas fa-spinner fa-spin text-3xl text-blue-500 mb-4"></i>
+                        <p class="text-gray-600">Loading repositories...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Expansion Placeholder -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-card rounded-3xl p-8 md:p-12 text-center fade-in">
+                <i class="fas fa-rocket text-5xl text-blue-500 mb-6"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                    More Coming Soon
+                </h3>
+                <p class="text-lg text-gray-700">
+                    Portfolio and blog sections will be added soon. Stay tuned for updates!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div>
+                <p class="text-gray-600 text-lg">
+                    Made with <span class="text-red-500">♥</span> and <span class="text-yellow-600">☕</span> by 
+                    <a href="https://yuzaiakira.github.io" target="_blank" rel="noopener noreferrer" 
+                       class="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-semibold">Akira</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

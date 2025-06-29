@@ -1,0 +1,315 @@
+/* Custom Styles for Akira's Personal Website */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Background Decorative Elements */
+.background-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: soft-light;
+}
+
+/* Glassmorphism + Neumorphism Styles */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.neumorphic-card {
+    background: #f0f4ff;
+    box-shadow: 
+        20px 20px 60px #c8d1e6,
+        -20px -20px 60px #ffffff;
+    border-radius: 20px;
+}
+
+.contact-link {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 15px 45px 0 rgba(31, 38, 135, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    background: rgba(163, 213, 255, 0.3);
+}
+
+.profile-image {
+    background: linear-gradient(135deg, #a3d5ff 0%, #87c4ff 100%);
+    box-shadow: 
+        0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; }
+.fade-in:nth-child(5) { animation-delay: 0.5s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(240, 244, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(163, 213, 255, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(163, 213, 255, 0.7);
+}
+
+/* Repository card hover effects */
+.repo-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 15px 45px 0 rgba(31, 38, 135, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Language color dots */
+.language-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Text truncation for repository descriptions */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .glass-card {
+        backdrop-filter: blur(5px);
+    }
+    
+    .contact-link:hover {
+        transform: translateY(-3px) scale(1.01);
+    }
+}
+
+/* Focus states for accessibility */
+.contact-link:focus,
+.repo-card:focus {
+    outline: 2px solid #a3d5ff;
+    outline-offset: 2px;
+}
+
+/* Dark mode support (future enhancement) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles can be added here */
+}
+
+/* Mouse Scroll Animation */
+.mouse-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    /* Ensure mouse animation is not affected by fade-in */
+    animation: none !important;
+    animation-play-state: running !important;
+}
+
+.mouse-scroll .mouse,
+.mouse-scroll .arrow,
+.mouse-scroll .wheel {
+    /* Ensure all mouse animation elements are visible */
+    animation-play-state: running !important;
+}
+
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 2px solid rgba(163, 213, 255, 0.8);
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background-color: rgba(163, 213, 255, 1);
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(15px);
+    }
+}
+
+.arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arrow span {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgba(163, 213, 255, 0.8);
+    border-bottom: 2px solid rgba(163, 213, 255, 0.8);
+    transform: rotate(45deg);
+    margin: 2px 0;
+    animation: arrow 1.5s infinite;
+}
+
+.arrow span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-2px, -2px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+}
+
+/* Hover effect for mouse scroll */
+.mouse-scroll:hover .mouse {
+    border-color: rgba(163, 213, 255, 1);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.mouse-scroll:hover .wheel {
+    background-color: rgba(163, 213, 255, 1);
+}
+
+.mouse-scroll:hover .arrow span {
+    border-color: rgba(163, 213, 255, 1);
+}
+
+/* Ensure mouse animation is visible */
+.mouse-scroll {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Additional visibility fixes */
+header .mouse-scroll {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* Make sure the mouse animation container is visible */
+header .absolute.bottom-8 {
+    z-index: 20 !important;
+    pointer-events: auto !important;
+}
+
+/* Responsive adjustments for mouse animation */
+@media (max-width: 768px) {
+    .mouse {
+        width: 22px;
+        height: 35px;
+    }
+    
+    .wheel {
+        width: 3px;
+        height: 6px;
+    }
+    
+    .arrow span {
+        width: 6px;
+        height: 6px;
+    }
+} 
